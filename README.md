@@ -199,6 +199,34 @@ claude --project-qa <folder> "question"
 claude --project-qa <folder> --question "question"
 ```
 
+### Fix Whole Folder
+Fixes **every `.py` file** inside a project folder (recursively) and saves the corrected project into:
+<folder>_fixed/
+
+**Usage:**
+```
+claude --fix-folder <folder>
+```
+
+**Example:**
+```
+claude --fix-folder "D:\etf\hakatoni\rivian\rivian_ml"
+```
+
+### Refactor Whole Folder
+Refactors **every `.py` file** inside a project folder (recursively), improving readability, structure, comments, and maintainability, while keeping **exact behavior**.  
+Outputs to: <folder>_refactored/
+
+**Usage:**
+```
+claude --refactor-folder <folder>
+```
+
+**Example:**
+```
+claude --refactor-folder "D:\etf\hakatoni\rivian\rivian_ml"
+```
+
 ---
 
 ## 🟩 File Generation Mode (project aware)
