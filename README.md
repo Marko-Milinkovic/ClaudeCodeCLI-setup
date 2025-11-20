@@ -298,6 +298,121 @@ Now run from anywhere:
 claude
 ```
 
+# 🟦 Chat Mode
+
+OmniFix CLI includes a persistent **Chat Mode**, turning Claude into an interactive terminal-native AI developer, similar to having a senior engineer working with you in real time.
+
+You can start it with:
+```bash
+claude --chat
+```
+
+Once inside chat mode, you can converse naturally:
+* ask questions
+* request explanations
+* iteratively refine code
+* explore architectures
+* fix bugs interactively
+* attach files or project folders
+* maintain an ongoing engineering session
+
+Chat mode behaves more like an AI pair-programmer than a one-shot command execution tool.
+
+---
+
+## 💬 Why Use Chat Mode?
+
+Chat mode is ideal when you want:
+
+### 1. Iterative reasoning and long discussions
+
+Example:
+```
+Explain the model architecture
+Now rewrite it using a cleaner design
+Now generate unit tests
+Now integrate metadata parsing
+```
+
+Claude remembers context, improving output with each step.
+
+### 2. Multi-step workflows
+
+Chat allows back-and-forth tasks like:
+* debugging + rewriting + testing
+* designing system architecture
+* exploring alternative implementations
+* learning / teaching sessions
+
+### 3. Project-aware memory
+
+In chat mode you can attach files:
+```
+/file main.cpp
+```
+
+Or entire projects:
+```
+/project D:\MyGames\Engine\
+```
+
+Claude will remember these across messages.
+
+### 4. Real-time AI engineering companion
+
+Chat mode offers:
+* persistent memory throughout conversation
+* adaptive reasoning
+* complex instructions broken into steps
+* the ability to correct or refine outputs
+
+This is something one-shot modes cannot do.
+
+---
+
+## When NOT to Use Chat Mode
+
+Use normal modes instead of chat when you want:
+
+** Deterministic file output**
+```bash
+claude --fix file.py
+claude --refactor engine.cpp
+```
+
+** Full-project operations**
+```bash
+claude --fix-folder project/
+claude --refactor-folder project/
+claude --rewrite-folder project/
+```
+
+** One-shot, clean output**
+```bash
+claude --project-qa src/ "Where is inference done?"
+```
+
+---
+
+## Chat Mode vs Non-Chat Mode
+
+| Scenario | Best Mode |
+|----------|-----------|
+| Designing architecture | Chat |
+| Debug conversation | Chat |
+| Explain code file-by-file | Chat |
+| Fix whole folder | Non-chat |
+| Refactor one file | Non-chat |
+| Generate new file | Non-chat |
+| Project-wide Q&A | Non-chat |
+| Simple questions | Non-chat |
+
+---
+
+## The Rule of Thumb
+
+> **Use Chat Mode for thinking. Use standard modes for doing.**
+
 ---
 
 # Internals / Dispatch Order
