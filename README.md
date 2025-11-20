@@ -268,36 +268,6 @@ Commands:
 claude "explain CNN in simple terms"
 ```
 
----
-
-# Installation
-
-### 1. Install SDK
-```
-py -m pip install anthropic
-```
-
-### 2. Set API key
-```
-setx ANTHROPIC_API_KEY "your-key-here"
-```
-
-### 3. Save `claude_cli.py` anywhere (Desktop recommended)
-
-### 4. Create launcher
-`C:\Windows\claude.bat`
-
-```bat
-@echo off
-py "%USERPROFILE%\Desktop\claude_cli.py" %*
-```
-
-Now run from anywhere:
-
-```
-claude
-```
-
 # 🟦 Chat Mode
 
 OmniFix CLI includes a persistent **Chat Mode**, turning Claude into an interactive terminal-native AI developer, similar to having a senior engineer working with you in real time.
@@ -320,7 +290,7 @@ Chat mode behaves more like an AI pair-programmer than a one-shot command execut
 
 ---
 
-## 💬 Why Use Chat Mode?
+## Why Use Chat Mode?
 
 Chat mode is ideal when you want:
 
@@ -414,6 +384,34 @@ claude --project-qa src/ "Where is inference done?"
 > **Use Chat Mode for thinking. Use standard modes for doing.**
 
 ---
+
+# Installation
+
+### 1. Install SDK
+```
+py -m pip install anthropic
+```
+
+### 2. Set API key
+```
+setx ANTHROPIC_API_KEY "your-key-here"
+```
+
+### 3. Save `claude_cli.py` anywhere (Desktop recommended)
+
+### 4. Create launcher
+`C:\Windows\claude.bat`
+
+```bat
+@echo off
+py "%USERPROFILE%\Desktop\claude_cli.py" %*
+```
+
+Now run from anywhere:
+
+```
+claude
+```
 
 # Internals / Dispatch Order
 
